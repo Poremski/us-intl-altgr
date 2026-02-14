@@ -1,18 +1,27 @@
-# us-altgr-intl-nodeadkeys Keymap
+# kbd-us-intl-nodeadkeys
 
 A US international keymap for the Linux virtual console that provides accented characters via Right-Alt / AltGr.
 
-Based on the keymap by Max Klinger.
+This is a **maintained fork** of the original keymap. The original upstream is no longer actively maintained, and this version fixes checksums and packaging to make it buildable on Arch Linux.
 
-## Installation
+## Installation via AUR
 
-1. Install the Arch Linux `kbd-us-intl-nodeadkeys` AUR package.
-2. Set `KEYMAP=us-altgr-intl-nodeadkeys` in `/etc/vconsole.conf`.
+You can install the package using your preferred AUR helper, e.g., `paru`:
 
-## License
+```bash
+paru -S kbd-us-intl-nodeadkeys
+```
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+## Usage
 
-    http://www.apache.org/licenses/LICENSE-2.0
+To activate the keymap temporarily:
 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+```bash
+loadkeys us-altgr-intl-nodeadkeys
+```
+
+To make it persistent, add the keymap to `/etc/vconsole.conf`:
+
+```bash
+KEYMAP=us-altgr-intl-nodeadkeys
+```
